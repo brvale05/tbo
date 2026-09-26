@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "binary_search.h"
 
 int binary_search(int *array, int size, int key)
 {
