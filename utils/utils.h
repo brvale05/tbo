@@ -4,13 +4,13 @@
 /**
  * @brief Compara dois valores inteiros.
  *
- * Esta função de comparação foi escrita com a assinatura exigida 
+ * Esta função de comparação foi escrita com a assinatura exigida
  * pelas funções da biblioteca padrão do C, como qsort().
  *
  * @param a Ponteiro constante para o primeiro número inteiro.
  * @param b Ponteiro constante para o segundo número inteiro.
- * @return 1 se o valor apontado por 'a' for maior que o de 'b', 
- *        -1 se o valor apontado por 'a' for menor que o de 'b', 
+ * @return 1 se o valor apontado por 'a' for maior que o de 'b',
+ *        -1 se o valor apontado por 'a' for menor que o de 'b',
  *         0 se os valores forem iguais.
  */
 int compare_int(const void *a, const void *b)
@@ -22,7 +22,7 @@ int compare_int(const void *a, const void *b)
         return 1;
     if (valA < valB)
         return -1;
-    return 0;    
+    return 0;
 }
 
 #endif
