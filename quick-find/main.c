@@ -21,7 +21,7 @@ int UF_connected(int *id, int p, int q)
     return id[p] == id[q];
 }
 
-int UF_union(int *id, int p, int q, int tam)
+void UF_union(int *id, int p, int q, int tam)
 {
     int p_id = UF_find(id, p);
     int q_id = UF_find(id, q);
