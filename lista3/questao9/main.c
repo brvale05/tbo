@@ -7,12 +7,10 @@ int formula(int N, int k)
     {
         return 1;
     } 
-    else if(k > N)
-    {
-        return 1;
-    }
 
-    return N + ((float)1/N * (formula(k - 1, k + 1) + formula(N - k, k + 1)));
+    int cLeft = formula(k - 1, k + 1);
+
+    return N + ((float)1/N * (cLeft + formula(N - k, k + 1)));
 }
 
 int main(int argc, char **argv)
