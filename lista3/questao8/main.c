@@ -19,11 +19,7 @@ int *bottom_up(int N)
             soma += Cn[k - 1] + Cn[incremento - k];
         }
 
-        printf("SOMA = %d\n", soma);
-
         Cn[incremento] = incremento + (((float)1/incremento) * soma);        
-
-        printf("C:%d = %d\n", incremento, Cn[incremento]);
 
         if(incremento == N)
         {
@@ -39,9 +35,11 @@ int *bottom_up(int N)
 
 int main(int argc, char **argv)
 {
-    int N = 3;
+    int N = atoi(argv[1]);
 
     int *Cn = bottom_up(N);
+
+    printf("C:%d = %d\n", N, Cn[N]);
 
     free(Cn);
 
