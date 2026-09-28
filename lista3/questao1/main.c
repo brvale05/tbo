@@ -14,12 +14,12 @@ double log_fatorial(double N)
 
 int main(int argc, char **argv)
 {
-    double N;
+    double num;
 
     printf("DIGITE N:\n");
-    scanf("%lf", &N);
+    scanf("%lf", &num);
 
-    printf("%lf\n", log_fatorial(N));
+    printf("%lf\n", log_fatorial(num));
 
     return 0;
 }
