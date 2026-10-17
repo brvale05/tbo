@@ -6,7 +6,7 @@ extern void sort(Item *a, int lo, int hi)
     {
         int id_menor = i;
 
-        for (int j = i + 1; j <= hi; j++)
+        for (int j = i + 1; j < hi; j++)
         {
             if(less(a[j], a[id_menor]))
             {
@@ -31,7 +31,7 @@ int main()
         array[i] = rand() % 20;
     }
 
-    sort(array, 0, N - 1);
+    sort(array, 0, N);
 
     for (size_t i = 0; i < N; i++)
     {
