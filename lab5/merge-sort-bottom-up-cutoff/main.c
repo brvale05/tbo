@@ -1,5 +1,18 @@
 #include "../item.h"
 
+#define CUTOFF 10
+
+void insertion_sort(Item *a, int lo, int hi)
+{
+    for(int i = lo; i <= hi; i++)
+    {
+        for(int j = i; j > lo; j--)
+        {
+            compexch(a[j - 1], a[j]);
+        }
+    }
+}
+
 void merge(Item *a, Item *aux, int low, int mid, int high)
 {
     for (int k = 0; k <= high; k++)
@@ -54,6 +67,11 @@ extern void sort(Item *a, int lo, int hi)
             }
 
             //  FAZER INSERTION SORT AQUI
+            if(size <= CUTOFF)
+            {
+                insertion_sort(a, lo, high);
+                continue;
+            }
 
             merge(a, aux, lo, mid, high);
         }
